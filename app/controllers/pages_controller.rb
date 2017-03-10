@@ -4,4 +4,8 @@ class PagesController < ApplicationController
       redirect_to books_path
     end
   end
+
+  def dashboard
+    @books = current_user.books
+  end
 end
