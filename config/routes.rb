@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'dashboard' => 'pages#dashboard'
 
-  before_action :authenticate_user!, only: [:dashboard]
+
 end
