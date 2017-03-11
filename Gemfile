@@ -6,6 +6,7 @@ gem 'cancan'
 gem 'paperclip'
 gem 'dotenv-rails', groups: [:development]
 gem 'aws-sdk', '< 2.0 '
+gem 'friendly_id'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
