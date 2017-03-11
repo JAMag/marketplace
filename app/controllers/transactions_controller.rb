@@ -11,7 +11,10 @@ class TransactionsController< ApplicationController
                                  card: token,
                                  description: current_user.email
       )
-      @sale = book.sales.create!(buyer_email: current_user.email)
+      @sale = book.sales.create!(
+          buyer_email: current_user.email,
+          seller_email: book.user.email
+      )
       redirect_to pickup_url(guid: @sale.guid)
 
     rescue Stipe::CardError => e
